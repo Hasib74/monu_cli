@@ -30,7 +30,13 @@ class MakeFeature extends Command {
 
     var _outPut = outPut ?? "./lib/featchers";
 
-    "mason make my_feature featchers --name $name -o $_outPut".run;
+    try {
+      "mason make my_feature featchers --name $name -o $_outPut".run;
+    } on Exception catch (e) {
+      // TODO
+
+      printerr(e.toString());
+    }
     _dependancyInjection(name);
   }
 

@@ -9,4 +9,5 @@ executables:
 dependencies:
   dcli:
   args:
+  mason:
 

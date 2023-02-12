@@ -4,7 +4,7 @@ import 'dcli.dart';
 
 class MakeProject extends Command {
   MakeProject({String? name, String? outPut, bool? isCreate}) {
-    super.createProject(name: name, output: outPut, isCreate: isCreate);
+    this.createProject(name: name, output: outPut, isCreate: isCreate);
   }
 
   @override

@@ -1,0 +1,11 @@
+bricks:
+  # Sample Brick
+  # Run `mason make hello` to try it out.
+  my_feature:
+    git:
+      url: https://github.com/Hasib74/cli_bricks.git
+      path: bricks/my_feature
+  my_app:
+    git:
+      url: https://github.com/Hasib74/cli_bricks.git
+      path: bricks/my_app
