@@ -7,7 +7,7 @@ abstract class Command {
 
   }
 
-  createProject({String? name}) {
+  createProject({String? name , String? output , bool? isCreate}) {
     print("name: $name");
   }
 }

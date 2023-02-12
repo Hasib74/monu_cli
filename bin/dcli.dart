@@ -53,7 +53,7 @@ void _result(dcli.ArgParser parser, List<String> arguments) {
       var _answer = dcli.ask("y/n: ", required: true, validator: Ask.required);
 
       if (_answer == "y") {
-        MakeFeature(projectName: _name, isCreate: true);
+        MakeFeature(projectName: _name, isCreate: true , outPut: _output);
       } else {
         exit(0);
       }
