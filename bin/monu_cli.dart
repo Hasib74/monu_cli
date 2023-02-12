@@ -28,7 +28,7 @@ void _help(dcli.ArgParser parser) {
 
 void _makeProject(dcli.ArgParser parser) {
   parser
-      .addOption('project', abbr: 'f', help: 'Create a new project', allowed: [
+      .addOption('project', abbr: 'p', help: 'Create a new project', allowed: [
     'create',
     'delete'
   ], allowedHelp: {
