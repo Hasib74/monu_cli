@@ -1,0 +1,4 @@
+name: monu_cli
+
+executables:
+  monu_cli:
