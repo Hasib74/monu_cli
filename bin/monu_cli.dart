@@ -11,7 +11,7 @@ import 'package:mason/mason.dart' as mason;
 main(List<String> arguments) async {
   // runMason();
 
-  //_activeMason();
+  _activeMason();
 
   var parser = ArgParser();
 
@@ -29,21 +29,15 @@ main(List<String> arguments) async {
 }
 
 void _activeMason() async {
+  var masonPath = which('mason');
+  if (masonPath.found) {
+    // printerr('Mason is already activated');
 
-
-  var activateProcess = await Process.run('pub', ['global', 'activate', 'mason']);
-  if (activateProcess.exitCode != 0) {
-    print('Failed to activate Mason: ${activateProcess.stderr}');
     return;
+  } else {
+    printerr('Mason is not activated');
+    "dart pub global activate mason_cli".run;
   }
-
-
-
-  // "dart pub global activate mason_cli".run;
-  // "mason add -g my_app --git-url https://github.com/Hasib74/cli_bricks.git --git-path bricks/my_app"
-  //     .run;
-  // "mason add -g my_feature --git-url https://github.com/Hasib74/cli_bricks.git --git-path bricks/my_feature"
-  //     .run;
 }
 
 update(ArgParser parser) {
