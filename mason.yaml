@@ -9,3 +9,7 @@ bricks:
     git:
       url: https://github.com/Hasib74/cli_bricks.git
       path: bricks/my_app
+  my_features_app:
+    git:
+      url: https://github.com/Hasib74/cli_bricks.git
+      path: bricks/my_features_app

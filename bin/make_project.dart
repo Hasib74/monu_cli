@@ -12,7 +12,7 @@ class MakeProject extends Command {
     // TODO: implement createProject
 
     if (isCreate == true) {
-      "mason make my_app --name $name -o $output".run;
+      "mason make my_features_app --name $name -o $output".run;
     } else {
       try {
         "rm -rf ${output}/$name".run;
