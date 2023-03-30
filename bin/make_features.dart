@@ -28,7 +28,7 @@ class MakeFeature extends Command {
     //
     print(dcli.green('Name of your features is: $name'));
 
-    var _outPut = outPut ?? "./lib/featchers";
+    var _outPut = outPut ?? "./lib/features";
 
     try {
       "mason make my_feature featchers --name $name -o $_outPut".run;
