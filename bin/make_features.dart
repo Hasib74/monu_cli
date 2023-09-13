@@ -45,7 +45,7 @@ class MakeFeature extends Command {
 
     var _data = dcli.read(_file);
 
-    List<String> _splitedList = _data.toParagraph().split("}");
+    List<String> _splitedList = _data.toString().split("}");
 
     String _writeData = "";
 
