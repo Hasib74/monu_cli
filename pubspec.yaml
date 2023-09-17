@@ -7,7 +7,7 @@ executables:
   monu_cli:
 
 dependencies:
-  dcli:
-  args:
-  mason:
+  dcli: 2.3.0
+  args: 2.4.2
+  mason: 0.1.0-dev.50
 

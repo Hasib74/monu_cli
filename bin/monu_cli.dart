@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:dcli/dcli.dart' as dcli;
 import 'package:args/args.dart';
 import 'package:dcli/dcli.dart';
@@ -45,12 +46,12 @@ update(ArgParser parser) {
   "mason update -g my_features".run;
 }
 
-void _help(dcli.ArgParser parser) {
+void _help(ArgParser parser) {
   parser.addFlag("help",
       abbr: 'h', negatable: false, help: 'Displays this help message.');
 }
 
-void _projectOptions(dcli.ArgParser parser) {
+void _projectOptions(ArgParser parser) {
   parser.addOption(
     'project',
     abbr: 'p',
@@ -63,7 +64,7 @@ void _projectOptions(dcli.ArgParser parser) {
   );
 }
 
-void _featureOptions(dcli.ArgParser parser) {
+void _featureOptions(ArgParser parser) {
   parser
       .addOption('feature', abbr: 'f', help: 'Create a new feature', allowed: [
     'make',
@@ -74,7 +75,7 @@ void _featureOptions(dcli.ArgParser parser) {
   });
 }
 
-void _result(dcli.ArgParser parser, List<String> arguments) {
+void _result(ArgParser parser, List<String> arguments) {
   var results = parser.parse(arguments);
 
   // if (parser.commands["update"] != null) {

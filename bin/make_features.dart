@@ -31,6 +31,8 @@ class MakeFeature extends Command {
     var _outPut = outPut ?? "./lib/featchers";
 
     try {
+
+      "dart pub global deactivate mason_cli".run;
       "mason make my_feature featchers --name $name -o $_outPut".run;
     } on Exception catch (e) {
       // TODO
@@ -45,7 +47,7 @@ class MakeFeature extends Command {
 
     var _data = dcli.read(_file);
 
-    List<String> _splitedList = _data.toString().split("}");
+    List<String> _splitedList = _data.toParagraph().split("}");
 
     String _writeData = "";
 

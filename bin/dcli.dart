@@ -18,12 +18,12 @@ main(List<String> arguments) async {
   _result(parser, arguments);
 }
 
-void _help(dcli.ArgParser parser) {
+void _help(ArgParser parser) {
   parser.addFlag("help",
       abbr: 'h', negatable: false, help: 'Displays this help message.');
 }
 
-void _feature(dcli.ArgParser parser) {
+void _feature(ArgParser parser) {
   parser
       .addOption('feature', abbr: 'f', help: 'Create a new feature', allowed: [
     'make',
@@ -41,7 +41,7 @@ void _feature(dcli.ArgParser parser) {
   //     abbr: 'f', negatable: false, help: 'Create a new feature');
 }
 
-void _result(dcli.ArgParser parser, List<String> arguments) {
+void _result(ArgParser parser, List<String> arguments) {
   var results = parser.parse(arguments);
 
   if (results["feature"] != null) {
