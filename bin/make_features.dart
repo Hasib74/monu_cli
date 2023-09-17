@@ -32,7 +32,7 @@ class MakeFeature extends Command {
 
     try {
 
-      "dart pub global deactivate mason_cli".run;
+    //  "dart pub global deactivate mason_cli".run;
       "mason make my_feature featchers --name $name -o $_outPut".run;
     } on Exception catch (e) {
       // TODO

@@ -12,7 +12,7 @@ class MakeProject extends Command {
     // TODO: implement createProject
 
     if (isCreate == true) {
-      "dart pub global deactivate mason_cli".run;
+   //   "dart pub global deactivate mason_cli".run;
       "mason make my_features_app --name $name -o $output".run;
     } else {
       try {
